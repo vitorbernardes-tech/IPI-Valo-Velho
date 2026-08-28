@@ -19,6 +19,17 @@ Projeto voluntário desenvolvido para a **Igreja Presbiteriana Independente do V
 - **JavaScript**
 
 ---
+## 🤟Tamo Junto!TMJ🤟
+
+Grupo de adolescentes que fazem um culto mais descontraído (fugindo do tradicional), contendo dinâmica, perguntas e respostas. Mas o foco é sempre atrair o público jovem a comparecer nas igrejas e nos culto com palavra do pastor, oração e o louvor.
+
+---
+
+## Dinâmica da Semana
+
+Uma pergunta simples sobre o conhecimento bíblico para saber se está afiado sobre a palavra do Senhor.
+
+---
 
 ## 🔗 Acesse o Projeto
 
