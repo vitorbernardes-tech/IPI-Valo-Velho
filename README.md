@@ -37,4 +37,4 @@ Uma pergunta simples sobre o conhecimento bíblico para saber se está afiado so
 
 ---
 
-Desenvolvido com carinho para a comunidade da IPI Valo Velho.
+Desenvolvido com carinho para a comunidade da IPI Valo Velho 2026.
