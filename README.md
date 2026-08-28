@@ -33,7 +33,7 @@ Uma pergunta simples sobre o conhecimento bíblico para saber se está afiado so
 
 ## 🔗 Acesse o Projeto
 
-- **Deploy / Site:** [Clique aqui para acessar o site](COLOQUE_O_LINK_AQUI)
+- **Deploy / Site:** [Clique aqui para acessar o site](https://vitorbernardes-tech.github.io/IPI-Valo-Velho/)
 
 ---
 
