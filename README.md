@@ -7,4 +7,6 @@ Trabalho Voluntário destinado a igreja para aumentar a visibilidade e o alcance
 * HTML
 * CSS
 * JavaScript
-* TypeScript
+
+--
+Link do projeto: 
