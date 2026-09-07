@@ -15,12 +15,6 @@
 }
 
 body[data-theme="dark"] {
-  --bg: #0f172a;
-  --paper: #1e293b;
-  --ink: #f8fafc;
-}
-
-body[data-theme="dark"] {
   --ink: #eaf5ff;
   --muted: #a8bdd7;
   --blue: #7bb3ff;
