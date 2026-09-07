@@ -1,23 +1,9 @@
-const savedTheme = localStorage.getItem('theme');
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const initialTheme = savedTheme || (prefersDarkMode ? 'dark' : 'light');
-const themeToggle = document.querySelector('.theme-toggle');
-const themeToggleIcon = document.querySelector('.theme-toggle__icon');
-const themeToggleText = document.querySelector('.theme-toggle__text');
-const checkinButton = document.querySelector('#checkin-button');
-const visitorName = document.querySelector('#visitor-name');
-const checkinMessage = document.querySelector('#checkin-message');
-const quizResult = document.querySelector('#quiz-result');
-
-function applyTheme(theme) {
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.querySelector('.theme-toggle');
-  if (!toggleBtn) return;
+  const iconSpan = document.querySelector('.theme-toggle__icon');
+  const textSpan = document.querySelector('.theme-toggle__text');
 
-  const iconSpan = toggleBtn.querySelector('.theme-toggle__icon');
-  const textSpan = toggleBtn.querySelector('.theme-toggle__text');
-
-  // Lê o tema salvo ou usa preferência do sistema
+  // Recupera tema salvo ou preferência do sistema
   const savedTheme = localStorage.getItem('theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -33,12 +19,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Aplica o tema logo no início
   applyTheme(savedTheme);
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.getAttribute('data-theme') === 'dark';
-    const nextTheme = isDark ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    localStorage.setItem('theme', nextTheme);
-  });
+  // Alterna ao clicar no botão
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.getAttribute('data-theme') === 'dark';
+      const nextTheme = isDark ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    });
+  }
+
+  // Check-in de visitantes
+  const checkinButton = document.querySelector('#checkin-button');
+  const visitorName = document.querySelector('#visitor-name');
+  const checkinMessage = document.querySelector('#checkin-message');
+
+  if (checkinButton && visitorName && checkinMessage) {
+    checkinButton.addEventListener('click', () => {
+      const name = visitorName.value.trim();
+      if (name) {
+        checkinMessage.textContent = `Que bom ter você aqui, ${name}! Seja muito bem-vindo(a).`;
+        visitorName.value = '';
+      }
+    });
+  }
 });
