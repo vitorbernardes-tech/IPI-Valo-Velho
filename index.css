@@ -14,7 +14,20 @@
   --shadow: 0 20px 50px rgba(16, 37, 63, .12);
 }
 
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero,
+.card,
+.info-card {
+  background-color: var(--white);
+  color: var(--ink);
+}
 body[data-theme="dark"] {
+
   --ink: #eaf5ff;
   --muted: #a8bdd7;
   --blue: #7bb3ff;
