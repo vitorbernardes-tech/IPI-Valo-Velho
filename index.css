@@ -14,24 +14,44 @@
   --shadow: 0 20px 50px rgba(16, 37, 63, .12);
 }
 
+body[data-theme="dark"] {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
 body[data-theme="dark"] .site-header {
-  background: rgba(10, 20, 35, 0.92);
-  border-bottom-color: var(--line);
+  background: rgba(10, 20, 35, 0.95);
+  border-bottom: 1px solid var(--line);
+}
+
+body[data-theme="dark"] .nav-links a {
+  color: var(--ink);
 }
 
 body[data-theme="dark"] .hero {
-  background-image: linear-gradient(125deg, rgba(10, 20, 35, .8), transparent 55%);
+  background-image: linear-gradient(125deg, rgba(10, 20, 35, 0.85), transparent 55%);
 }
 
-body[data-theme="dark"] .schedule-card {
-  background: rgba(19, 38, 61, 0.7);
+body[data-theme="dark"] .schedule-card,
+body[data-theme="dark"] .profile-card,
+body[data-theme="dark"] .info-card,
+body[data-theme="dark"] .interactive-card {
+  background-color: var(--white);
   border-color: var(--line);
+  color: var(--ink);
 }
 
-body[data-theme="dark"] nav {
+body[data-theme="dark"] p,
+body[data-theme="dark"] .section-desc,
+body[data-theme="dark"] .card-desc {
   color: var(--muted);
 }
 
+body[data-theme="dark"] input[type="text"] {
+  background-color: var(--paper);
+  border-color: var(--line);
+  color: var(--ink);
+}
 body[data-theme="dark"] {
 
   --ink: #eaf5ff;
