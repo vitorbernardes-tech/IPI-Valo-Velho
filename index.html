@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Conheça a IPI Valo Velho, seus cultos, projetos e atividades da semana." />
     <title>IPI Valo Velho | Comunidade e Fé</title>
-    <link rel="stylesheet" href="./index.css?v=5" />
+    <link rel="stylesheet" href="../index.css?v=5" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#inicio" aria-label="IPI Valo Velho - início">
-          <img src="./images/igrejalogo.jpg" alt="" />
+          <img src="./images/igrejalogo.jpg" alt="Logo da Igreja Presbiteriana Independente Valo Velho" />
+          <img src="./images/foto-igreja.jpg" alt="Foto da Igreja Presbiteriana Independente Valo Velho" />
           <span><strong>IPI</strong> Valo Velho</span>
         </a>
         <nav aria-label="Navegação principal">
@@ -22,7 +23,13 @@
           <a href="#dinamica">Dinâmica</a>
           <a href="#contato">Contato</a>
         </nav>
-        <a class="button button-small" href="#agenda">Ver horários</a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__text">Claro</span>
+          </button>
+          <a class="button button-small" href="#agenda">Ver horários</a>
+        </div>
       </div>
     </header>
 
@@ -48,7 +55,7 @@
           </div>
           <div class="hero-art">
             <div class="hero-image-frame">
-             <img src="./images/igrejalogo.jpg" alt="Logo da Igreja Presbiteriana Independente Valo Velho" />
+              <img src="../images/igrejalogo.jpg" alt="Logo da Igreja Presbiteriana Independente Valo Velho" />
             </div>
             <div class="hero-note"><span class="note-dot"></span><strong>Próximo encontro</strong><span>Domingo, 18h30</span></div>
           </div>
@@ -58,7 +65,7 @@
       <section class="profile-section" id="perfil">
         <div class="container profile-grid">
           <div class="profile-image-frame">
-           <img src="./images/Culto.jpg" alt="Culto acontecendo no interior da Igreja Presbiteriana Independente Valo Velho" />
+            <img src="../images/Culto.jpg" alt="Culto acontecendo no interior da Igreja Presbiteriana Independente Valo Velho" />
             <span class="profile-caption">Um espaço onde a comunidade se reúne para cultuar e acolher</span>
           </div>
           <div class="profile-copy">
@@ -96,9 +103,9 @@
             <article class="schedule-card"><span class="day">QUI</span><div><h3>Célula Fé e Vida</h3><p>Quinta-feira às 19h30</p></div><span class="arrow" aria-hidden="true">&#8594;</span></article>
             <article class="schedule-card"><span class="day">SÁB</span><div><h3>Bazar Beneficente</h3><p>3º sábado do mês, 9h às 15h</p></div><span class="tag red">Vendas</span></article>
             <article class="schedule-card featured"><span class="day">SÁB</span><div><h3>Projeto Tamo Junto</h3><p>2º sábado do mês, às 19h</p></div><span class="tag">8 a 80 anos</span></article>
-            <article class="schedule-card"><span class="day">SÁB</span><div><h3>Encontro das Mulheres</h3><p>2º sábado do mês, às 16h</p></div><span class="tag rose">Mulheres</span></article>
+            <article class="schedule-card"><span class="day">SÁB</span><div><h3>Encontro das Mulheres</h3><p>2º sábado do mês, às 15h</p></div><span class="tag rose">Mulheres</span></article>
             <article class="schedule-card"><span class="day">SÁB</span><div><h3>UMPI - Encontro</h3><p>3º sábado do mês, às 19h</p></div><span class="tag purple">Juventude</span></article>
-            <article class="schedule-card"><span class="day">DOM</span><div><h3>Escola bíblica e culto</h3><p>Domingo pela manhã, às 9:30h</p></div><span class="arrow" aria-hidden="true">&#8594;</span></article>
+            <article class="schedule-card"><span class="day">DOM</span><div><h3>Escola bíblica e culto</h3><p>Domingo pela manhã, às 9h</p></div><span class="arrow" aria-hidden="true">&#8594;</span></article>
             <article class="schedule-card"><span class="day">DOM</span><div><h3>Culto</h3><p>Domingo à noite, às 18h</p></div><span class="arrow" aria-hidden="true">&#8594;</span></article>
           </div>
         </div>
@@ -107,8 +114,7 @@
       <section class="tamo-section" id="tamo-junto">
         <div class="container tamo-layout">
           <div class="tamo-heading">
-            <p class="section-label">Projeto Tamo Junto</p>
-            <img class="tamo-logo tamo-logo-top" src="./images/logo.jpg" alt="Logo do Projeto Tamo Junto" />
+            <p class="section-label">Projeto Tamo Junto</p><img class="tamo-logo tamo-logo-top" src="../images/logo.jpg" alt="Logo do Projeto Tamo Junto" />
             <h2>Um encontro leve para criar vínculos de verdade.</h2>
             <p>Todo terceiro sábado do mês, às 18h, reunimos jovens, famílias e pessoas de todas as idades para conversar, celebrar e descobrir a fé sem pressão.</p>
             <p>Você não precisa conhecer ninguém ou já ter participado de uma igreja. Chegue como está, participe das atividades e encontre um espaço seguro para fazer perguntas e construir novas amizades.</p>
@@ -148,6 +154,6 @@
 
     <footer><div class="container footer-wrap"><span>IPI Valo Velho</span><span>Uma igreja viva no bairro.</span></div></footer>
 
-    <script src="./app.js" defer></script>
+    <script src="../app.js" defer></script>
   </body>
 </html>
