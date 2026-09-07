@@ -11,13 +11,13 @@ const quizResult = document.querySelector('#quiz-result');
 
 function applyTheme(theme) {
 document.addEventListener('DOMContentLoaded', () => {
-
   const toggleBtn = document.querySelector('.theme-toggle');
   if (!toggleBtn) return;
 
   const iconSpan = toggleBtn.querySelector('.theme-toggle__icon');
   const textSpan = toggleBtn.querySelector('.theme-toggle__text');
 
+  // Lê o tema salvo ou usa preferência do sistema
   const savedTheme = localStorage.getItem('theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -33,13 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Executa ao carregar
   applyTheme(savedTheme);
 
-  // 4. Alterna ao clicar
   toggleBtn.addEventListener('click', () => {
-    const isCurrentlyDark = document.body.getAttribute('data-theme') === 'dark';
-    const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    const nextTheme = isDark ? 'light' : 'dark';
     applyTheme(nextTheme);
     localStorage.setItem('theme', nextTheme);
   });
