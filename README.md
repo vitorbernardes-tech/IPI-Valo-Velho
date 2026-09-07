@@ -17,7 +17,8 @@ Projeto voluntário desenvolvido para a **Igreja Presbiteriana Independente do V
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-
+---
+Função de tema claro ☀️ e escuro 🌙 adaptável a sua escolha  
 ---
 ## 🤟Tamo Junto!TMJ🤟
 
