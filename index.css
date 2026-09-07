@@ -193,7 +193,138 @@ footer { padding: 24px 0; background: var(--ink); color: #b9c8d8; font-size: .82
 .game-section { background: #fff1e9; color: var(--ink); border-top: 1px solid #f2c3b7; }.game-section .light { color: var(--red); }.game-layout h2 { color: var(--blue-dark); }.game-layout > div > p:last-child { color: var(--muted); }.quiz-card { border-left-color: var(--red); background: var(--white); box-shadow: 0 16px 35px rgba(16,37,63,.12); }.quiz-card h3 { color: var(--blue-dark); }.quiz-count { color: var(--red); }.quiz-options button { border-color: var(--line); background: #fffdf5; color: var(--ink); }.quiz-options button:hover { border-color: var(--red); background: #fff1e9; }.intercession-note { background: rgba(19,105,212,.08); }.intercession-note strong { color: var(--red); }.intercession-note span { color: var(--muted); }
 .tamo-section { background: var(--blue); border-color: var(--white); color: var(--white); }.tamo-section .section-label, .tamo-section h2, .tamo-section .tamo-heading > p:not(.section-label) { color: var(--white); }.tamo-section .tamo-logo-top { border-color: var(--white); box-shadow: 8px 8px 0 var(--white); }.tamo-section .tamo-date { background: var(--white); border-left-color: var(--white); }.tamo-section .tamo-date strong { color: var(--blue-dark); }.tamo-section .tamo-date span { color: var(--blue); }.tamo-section .activity-card { background: var(--white); border-color: var(--white); }.tamo-section .activity-card > span { color: var(--blue); }.tamo-section .activity-card h3 { color: var(--blue-dark); }.tamo-section .activity-card p { color: var(--muted); }
 
-/* Layout responsivo para os cards da seção Na Semana */
+/* Seção Encontro de Mulheres */
+.women-section {
+  padding: 4.5rem 1rem;
+  background: linear-gradient(180deg, #fdf8f9 0%, #faedf2 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.women-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.women-heading h2 {
+  font-size: 2.25rem;
+  color: #4a2040;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.women-heading p {
+  color: #6d5267;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.women-logo-top {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0.75rem 0 1rem;
+  box-shadow: 0 8px 24px rgba(74, 32, 64, 0.08);
+}
+
+.women-date {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e8ccd9;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #4a2040;
+  margin-top: 0.5rem;
+}
+
+.women-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.women-activities .activity-card {
+  background: #ffffff;
+  border: 1px solid #ebd8e2;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(74, 32, 64, 0.04);
+}
+
+.women-activities .activity-card span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8c5e87;
+  line-height: 1;
+}
+
+.women-activities .activity-card h3 {
+  font-size: 1.1rem;
+  color: #4a2040;
+  margin-bottom: 0.35rem;
+}
+
+.women-activities .activity-card p {
+  font-size: 0.92rem;
+  color: #6d5267;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Suporte ao Modo Escuro */
+body[data-theme="dark"] .women-section {
+  background: #141322;
+  border-color: #2e283d;
+}
+
+body[data-theme="dark"] .women-heading h2 {
+  color: #f5dce9;
+}
+
+body[data-theme="dark"] .women-heading p {
+  color: #b5a4b4;
+}
+
+body[data-theme="dark"] .women-date {
+  background: #1e1b30;
+  border-color: #443b59;
+  color: #f5dce9;
+}
+
+body[data-theme="dark"] .women-activities .activity-card {
+  background: #1c192d;
+  border-color: #38314a;
+}
+
+body[data-theme="dark"] .women-activities .activity-card span {
+  color: #d19ec5;
+}
+
+body[data-theme="dark"] .women-activities .activity-card h3 {
+  color: #faeaf2;
+}
+
+body[data-theme="dark"] .women-activities .activity-card p {
+  color: #b5a4b4;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .women-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
