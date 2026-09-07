@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Aplica o tema logo no início
   applyTheme(savedTheme);
 
-  // Alterna ao clicar no botão
+  
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       const isDark = document.body.getAttribute('data-theme') === 'dark';
