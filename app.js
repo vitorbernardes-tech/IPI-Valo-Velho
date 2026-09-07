@@ -10,41 +10,37 @@ const checkinMessage = document.querySelector('#checkin-message');
 const quizResult = document.querySelector('#quiz-result');
 
 function applyTheme(theme) {
-  document.body.dataset.theme = theme;
-  const isDark = theme === 'dark';
+document.addEventListener('DOMContentLoaded', () => {
 
-  if (themeToggle) {
-    themeToggle.setAttribute('aria-pressed', String(isDark));
-    themeToggle.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (!toggleBtn) return;
+
+  const iconSpan = toggleBtn.querySelector('.theme-toggle__icon');
+  const textSpan = toggleBtn.querySelector('.theme-toggle__text');
+
+  const savedTheme = localStorage.getItem('theme') || 
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      if (iconSpan) iconSpan.textContent = '🌙';
+      if (textSpan) textSpan.textContent = 'Escuro';
+    } else {
+      document.body.removeAttribute('data-theme');
+      if (iconSpan) iconSpan.textContent = '☀️';
+      if (textSpan) textSpan.textContent = 'Claro';
+    }
   }
 
-  if (themeToggleIcon) {
-    themeToggleIcon.textContent = isDark ? '🌙' : '☀️';
-  }
+  // Executa ao carregar
+  applyTheme(savedTheme);
 
-  if (themeToggleText) {
-    themeToggleText.textContent = isDark ? 'Escuro' : 'Claro';
-  }
-
-  localStorage.setItem('theme', theme);
-}
-
-document.body.dataset.theme = theme;
-themeToggle?.addEventListener('click', () => {
-  const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-  applyTheme(nextTheme);
-});
-
-checkinButton?.addEventListener('click', () => {
-  const name = visitorName.value.trim();
-  checkinMessage.textContent = name ? `Que bom ter você aqui, ${name}!` : 'Que bom ter você aqui!';
-  visitorName.value = '';
-});
-
-document.querySelectorAll('[data-answer]').forEach((option) => {
-  option.addEventListener('click', () => {
-    const correct = option.dataset.answer === 'true';
-    quizResult.textContent = correct ? 'Acertou! O amor é o centro.' : 'Quase! Tente outra opção.';
-    quizResult.className = `quiz-result ${correct ? 'success' : 'try-again'}`;
+  // 4. Alterna ao clicar
+  toggleBtn.addEventListener('click', () => {
+    const isCurrentlyDark = document.body.getAttribute('data-theme') === 'dark';
+    const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
   });
 });
