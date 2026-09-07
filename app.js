@@ -29,8 +29,7 @@ function applyTheme(theme) {
   localStorage.setItem('theme', theme);
 }
 
-applyTheme(initialTheme);
-
+document.body.dataset.theme = theme;
 themeToggle?.addEventListener('click', () => {
   const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
   applyTheme(nextTheme);
