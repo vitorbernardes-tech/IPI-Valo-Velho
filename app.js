@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconSpan = document.querySelector('.theme-toggle__icon');
   const textSpan = document.querySelector('.theme-toggle__text');
 
-  // Recupera tema salvo ou preferência do sistema
   const savedTheme = localStorage.getItem('theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Aplica o tema logo no início
+
   applyTheme(savedTheme);
 
   
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Check-in de visitantes
   const checkinButton = document.querySelector('#checkin-button');
   const visitorName = document.querySelector('#visitor-name');
   const checkinMessage = document.querySelector('#checkin-message');
