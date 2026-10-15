@@ -1,4 +1,4 @@
-# ⛪ IPI Valo Velho
+## ⛪ IPI Valo Velho
 
 Projeto voluntário desenvolvido para a **Igreja Presbiteriana Independente do Valo Velho**, com o objetivo de aumentar a visibilidade, modernizar a presença digital e alcançar novos visitantes e membros na comunidade.
 
